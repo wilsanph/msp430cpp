@@ -12,34 +12,32 @@
 
 namespace MapGpio {
 
-	namespace baseAddresses
-	{
-		enum _baseAddresses
-		{
-			PORT1 = 0x200,
-			PORT2 = 0x201
-		};
-	}
-
 	struct GpioRegs
 	{
 		u8 PxIN;
-		u8 reserved1;
+		u8 reserved1;// PxIN-2 or PxOUT-1
 		u8 PxOUT;
-		u8 reserved2;
+		u8 reserved2;// PxOUT-2 or PxDIR-1
 		u8 PxDIR;
-		u8 reserved3;
+		u8 reserved3;// PxDIR-2 or PxREN-1
 		u8 PxREN;
-		u8 reserved4;
+		u8 reserved4;// PxREN-2 or PxDS-1
 		u8 PxDS;
-		u8 reserved5;
+		u8 reserved5;// PxDS-2 or PxSEL-1
 		u8 PxSEL;
-		u8 reserved6;
+		u8 reserved6;// PxSEL-2
+	};
+
+	struct InterruptRegs
+	{
+		u8 PxIV;
+		u8 reserved1;// PxIV-2
 		u8 PxIES;
-		u8 reserved7;
+		u8 reserved2;// PxIES-2
 		u8 PxIE;
-		u8 reserved8;
+		u8 reserved3;// PxIE-2
 		u8 PxIFG;
+		u8 reserved4;// PxIFG-2
 	};
 
 

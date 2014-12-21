@@ -6,6 +6,7 @@ CG_TOOL_ROOT := /home/wilsan/ti/ccsv6/tools/compiler/msp430_4.3.1
 
 ORDERED_OBJS += \
 $(GEN_CMDS__FLAG) \
+"./utils.obj" \
 "./blink.obj" \
 "../lnk_msp430f5529.cmd" \
 -l"libc.a" \
@@ -140,7 +141,8 @@ mspCpp_ccs.hex: $(EXE_OUTPUTS)
 clean:
 	-$(RM) $(EXE_OUTPUTS__QUOTED)$(BIN_OUTPUTS__QUOTED)
 	-$(RM) "blink.pp" 
-	-$(RM) "blink.obj" 
+	-$(RM) "blink.obj" "utils.obj" 
+	-$(RM) "utils.pp" 
 	-@echo 'Finished clean'
 	-@echo ' '
 
