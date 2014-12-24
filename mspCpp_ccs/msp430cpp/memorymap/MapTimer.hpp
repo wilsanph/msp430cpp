@@ -13,50 +13,28 @@
 namespace MapTimer
 {
 
-	struct TimerARegs
+	struct TimerRegs
 	{
-		u16 TAxCTL;
-		u16 TAxCCTL0;
-		u16 TAxCCTL1;
-		u16 TAxCCTL2;
-		u16 TAxCCTL3;
-		u16 TAxCCTL4;
-		u16 reserved1;
-		u16 reserved2;
-		u16 TAxR;
-		u16 TAxCCR0;
-		u16 TAxCCR1;
-		u16 TAxCCR2;
-		u16 TAxCCR3;
-		u16 TAxCCR4;
-		u16 reserved3;
-		u16 reserved4;
-		u16 TAxEX0;
-		u16 TAxIV;
+		u16 TxnCTL;// 0x00
+		u16 TxnCCTL0;// 0x02
+		u16 TxnCCTL1;// 0x04
+		u16 TxnCCTL2;// 0x06
+		u16 TxnCCTL3;// 0x08
+		u16 TxnCCTL4;// 0x0a
+		u16 TxnCCTL5;// 0x0c
+		u16 TxnCCTL6;// 0x0e
+		u16 TxnR;// 0x10
+		u16 TxnCCR0;// 0x12
+		u16 TxnCCR1;// 0x14
+		u16 TxnCCR2;// 0x16
+		u16 TxnCCR3;// 0x18
+		u16 TxnCCR4;// 0x1a
+		u16 TxnCCR5;// 0x1c
+		u16 TxnCCR6;// 0x1e
+		u16 TxnEX0;// 0x20
+		u16 reserved1[6];// 0x2i 'i' in { 2,4,6,8,a,c }
+		u16 TxnIV;// 0x2e
 	};
-
-	struct TimerBRegs
-	{
-		u16 TBxCTL;
-		u16 TBxCCTL0;
-		u16 TBxCCTL1;
-		u16 TBxCCTL2;
-		u16 TBxCCTL3;
-		u16 TBxCCTL4;
-		u16 TBxCCTL5;
-		u16 TBxCCTL6;
-		u16 TBxR;
-		u16 TBxCCR0;
-		u16 TBxCCR1;
-		u16 TBxCCR2;
-		u16 TBxCCR3;
-		u16 TBxCCR4;
-		u16 TBxCCR5;
-		u16 TBxCCR6;
-		u16 TBxEX0;
-		u16 TBxIV;
-	};
-
 }
 
 

@@ -14,7 +14,7 @@ class DiffRobot : public GApplication
 {
 public:
 
-}
+};
 
 void DiffRobot::init()
 {
